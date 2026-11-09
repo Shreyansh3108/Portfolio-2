@@ -18,9 +18,6 @@ export default function Featured() {
             <motion.div 
               key={project.id}
               onViewportEnter={() => setActiveProject(index)}
-              onViewportExit={() => {
-                // Optional: handle exit if needed, or leave blank
-              }}
               viewport={{ amount: 0.3 }} 
               className={`w-full max-w-3xl relative group cursor-default ${
                 isEven ? "self-start" : "self-end"

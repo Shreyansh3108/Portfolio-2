@@ -14,9 +14,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          // Force activeIndex to -1 so models stay on the right at the top
           onViewportEnter={() => setActiveProject(-1)}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ amount: 0.1 }}
         >
            {/* ... Keep all your existing Hero HTML inside here ... */}
            

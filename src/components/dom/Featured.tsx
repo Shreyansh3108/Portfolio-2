@@ -17,9 +17,9 @@ export default function Featured() {
           return (
             <motion.div 
               key={project.id}
-              // THIS IS THE FIX: Fires reliably when intersection changes
-              onViewportChange={(inView) => {
-                if (inView) setActiveProject(index);
+              onViewportEnter={() => setActiveProject(index)}
+              onViewportExit={() => {
+                // Optional: handle exit if needed, or leave blank
               }}
               viewport={{ amount: 0.3 }} 
               className={`w-full max-w-3xl relative group cursor-default ${

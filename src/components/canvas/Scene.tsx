@@ -55,8 +55,11 @@ function AnimatedModels() {
 
 export default function Scene() {
   return (
-    <div className="fixed inset-0 w-full h-full z-50 pointer-events-none">
-      <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
+    <div className="fixed inset-0 w-full h-full z-50 pointer-events-none [&_div]:pointer-events-none [&_canvas]:pointer-events-none">
+      <Canvas
+        style={{ pointerEvents: "none" }}
+        camera={{ position: [0, 0, 10], fov: 45 }}
+      >
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} color="#ffffff" />
         <Suspense fallback={null}>

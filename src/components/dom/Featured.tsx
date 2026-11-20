@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { useStore } from "@/store/useStore";
+import ProjectLinks from "./ProjectLinks";
 
 export default function Featured() {
   const setActiveProject = useStore((state) => state.setActiveProject);
@@ -74,6 +75,10 @@ export default function Featured() {
                     </div>
                   ))}
                 </div>
+                <ProjectLinks
+                  githubLink={project.githubLink}
+                  liveLink={project.liveLink}
+                />
               </div>
             </motion.div>
           );
